@@ -53,6 +53,13 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
+
+       //<![CDATA[
+$(document.body).append('<div id="page-loader"></div>');
+$(window).on("beforeunload", function() {
+$('#page-loader').fadeIn(1000).delay(8000).fadeOut(1000);
+});
+//]]>
   
     // Floating label headings for the contact form
     $(function() {
