@@ -17,6 +17,11 @@
         <link rel="stylesheet" href="css/body.css">
     </head>
     <body id="page-top">
+        <div id="popup-container">
+    <img id="popup-image" src="assets/img/iklanppdb.jpg" alt="Iklan">
+    <button id="close-button">Tutup</button>
+  </div>
+
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
             <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">PPDB MIN 1 TANGGAMUS</a>
                 <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
@@ -357,5 +362,19 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script type='text/javascript'></script>
+        <script>
+    const popupContainer = document.getElementById('popup-container');
+    const closeButton = document.getElementById('close-button');
+
+    // Tampilkan pop-up setelah beberapa detik (misalnya 3 detik)
+    setTimeout(() => {
+      popupContainer.style.display = 'block';
+    }, 5000);
+
+    // Sembunyikan pop-up saat tombol tutup diklik
+    closeButton.addEventListener('click', () => {
+      popupContainer.style.display = 'none';
+    });
+  </script>
     </body>
 </html>
